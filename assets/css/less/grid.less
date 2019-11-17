@@ -1,0 +1,53 @@
+@import (reference) "config";
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(@numberOfColumns, @columnSize);
+	grid-column-gap: @gutter;
+	grid-row-gap: $grid-column-gap;
+	margin: initial @gutter;
+
+	&.no-gaps {
+		grid-gap: 0 0;
+	}
+
+	&.double-gaps {
+		grid-gap: (@gutter * 2) (@gutter * 2);
+	}
+
+	&.no-column-gap {
+		grid-column-gap: 0;
+	}
+
+	&.double-column-gap {
+		grid-column-gap: (@gutter * 2);
+	}
+
+	&.no-column-gap {
+		grid-column-gap: 0;
+	}
+
+	&.no-row-gap {
+		grid-row-gap: 0;
+	}
+
+	&.double-row-gap {
+		grid-row-gap: (@gutter * 2);
+	}
+
+	.cell {
+		each(range(@numberOfColumns), {
+			&.span-@{value} {
+				grid-column-end: span @value;
+			}
+
+			&.start-@{value} {
+				grid-column-start: @value;
+			}
+
+			&.end-@{value} {
+				grid-column-end: @value;
+			}
+		});
+	}
+}
