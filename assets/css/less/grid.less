@@ -48,6 +48,62 @@
 			&.end-@{value} {
 				grid-column-end: @value;
 			}
+
+			@media (max-width: (@breakpoint-sm - 1)) {
+				&.sm-span-@{value} {
+					grid-column-end: span @value;
+				}
+
+				&.sm-start-@{value} {
+					grid-column-start: @value;
+				}
+
+				&.sm-end-@{value} {
+					grid-column-end: @value;
+				}
+			}
+
+			@media (max-width: (@breakpoint-md - 1)) {
+				&.md-span-@{value} {
+					grid-column-end: span @value;
+				}
+
+				&.md-start-@{value} {
+					grid-column-start: @value;
+				}
+
+				&.md-end-@{value} {
+					grid-column-end: @value;
+				}
+			}
+
+			@media (max-width: (@breakpoint-lg - 1)) {
+				&.lg-span-@{value} {
+					grid-column-end: span @value;
+				}
+
+				&.lg-start-@{value} {
+					grid-column-start: @value;
+				}
+
+				&.lg-end-@{value} {
+					grid-column-end: @value;
+				}
+			}
+
+			@media (max-width: (@breakpoint-xl - 1)) {
+				&.xl-span-@{value} {
+					grid-column-end: span @value;
+				}
+
+				&.xl-start-@{value} {
+					grid-column-start: @value;
+				}
+
+				&.xl-end-@{value} {
+					grid-column-end: @value;
+				}
+			}
 		});
 	}
 }
